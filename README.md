@@ -41,7 +41,7 @@
 - 
 ### 기타 역량
 
-- ?
+- Android TDD: https://github.com/raywenderlich/atdd-materials
 
 ### Open API
 
