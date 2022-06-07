@@ -83,3 +83,13 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+.DS_Store
+chan/.DS_Store
+chan/Week1/MyApp/.idea/codeStyles/codeStyleConfig.xml
+chan/Week1/MyApp/.idea/codeStyles/Project.xml
+chan/Week1/MyApp/.idea/compiler.xml
+chan/Week1/MyApp/.idea/dbnavigator.xml
+chan/Week1/MyApp/.idea/deploymentTargetDropDown.xml
+chan/Week1/MyApp/.idea/gradle.xml
+chan/Week1/MyApp/.idea/jarRepositories.xml
+chan/Week1/MyApp/.idea/misc.xml
