@@ -6,6 +6,7 @@ import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.typeText
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -30,17 +31,17 @@ class MainActivityTest {
 
     @Test
     fun testAddMemo() {
-        onView(withId(R.id.et_memo)).perform(ViewActions.typeText("myMemo")) // EditText에서 typing을 한다.
+        onView(withId(R.id.et_memo)).perform(typeText("myMemo")) // EditText에서 typing을 한다.
         Espresso.closeSoftKeyboard() // 소프트키보드를 숨긴다.
         onView(withId(R.id.btn_add)).perform(click()) // button을 클릭한다.
 
         // 동일 작업1
-        onView(withId(R.id.et_memo)).perform(ViewActions.typeText("myMemo2"))
+        onView(withId(R.id.et_memo)).perform(typeText("myMemo2"))
         Espresso.closeSoftKeyboard()
         onView(withId(R.id.btn_add)).perform(click())
 
         // 동일 작업2
-        onView(withId(R.id.et_memo)).perform(ViewActions.typeText("myMemo3"))
+        onView(withId(R.id.et_memo)).perform(typeText("myMemo3"))
         Espresso.closeSoftKeyboard()
         onView(withId(R.id.btn_add)).perform(click())
 
@@ -53,11 +54,11 @@ class MainActivityTest {
         onView(withId(R.id.btn_clear)).perform(click())
         onView(withId(R.id.rcv_memo)).check(matches(hasChildCount(0))) // check2
 
-        onView(withId(R.id.et_memo)).perform(ViewActions.typeText("myMemo4"))
+        onView(withId(R.id.et_memo)).perform(typeText("myMemo4"))
         Espresso.closeSoftKeyboard()
         onView(withId(R.id.btn_add)).perform(click())
 
-        onView(withId(R.id.et_memo)).perform(ViewActions.typeText("myMemo5"))
+        onView(withId(R.id.et_memo)).perform(typeText("myMemo5"))
         Espresso.closeSoftKeyboard()
         onView(withId(R.id.btn_add)).perform(click())
 

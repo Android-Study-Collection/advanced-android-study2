@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="Enter the temperature and press Convert"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/celsius_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="Celsius"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/acet_celsius"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:digits="-01234567899"
+        android:nextFocusDown="@+id/convert"
+        android:padding="3dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/celsius_label"
+        app:layout_constraintTop_toBottomOf="@id/message" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fahrenheit_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="Fahrenheit"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/celsius_label" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/acet_fahrenheit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/fahrenheit_label"
+        app:layout_constraintTop_toBottomOf="@id/celsius_label" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acbtn_convert"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:nextFocusUp="@+id/celsius"
+        android:padding="6dp"
+        android:text="Convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/acet_fahrenheit" />
+</androidx.constraintlayout.widget.ConstraintLayout>
