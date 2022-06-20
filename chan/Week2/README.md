@@ -36,8 +36,6 @@ val number: LiveData<Int>
 
 Flow로 사용하고자 할 때.
 
-- Flow 관련
-
 4. emit() vs emitSource()
 
 (코루틴의) liveData{} 블록에서 사용되며,
@@ -77,6 +75,8 @@ val user = liveData {
 
 * emit(), emitSource() 둘 다 기존의 값들은 없어진다.
 
+- Flow 관련
+
 1. map
 
 ```
@@ -108,11 +108,10 @@ fun flowWithCombine() = runBlocking {
 }
 
 // 결과:
-1A
-2A
-3A
-3B
-3C
+2 / A
+3 / A
+3 / B
+3 / C
 ```
 
 zip(): 다른 애 기다렸다가 방출
@@ -130,9 +129,9 @@ fun flowWithZip() = runBlocking {
 }
 
 // 결과:
-1A
-2B
-3C
+1 / A
+2 / B
+3 / C
 ```
 
 flattenMerge(): 그냥 따로 방출
