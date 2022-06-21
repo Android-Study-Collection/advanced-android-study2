@@ -138,21 +138,21 @@ flattenMerge(): 그냥 따로 방출
 
 ```
 fun FlowWithflatteMerge() = runBlocking{
-    val intFlow = flowOf(1, 2, 3).delayEach(10)
-    val charFlow = flowOf("A", "B", "C").delayEach(20)
+    val intFlow = flowOf(1, 2, 3).onEach { delay(10) }
+    val charFlow = flowOf("A", "B", "C").onEach { delay(20) }
 
     flowOf(intFlow, charFlow).flattenMerge().collect {
-        println("$it")
+        println("$it / ${System.currentTimeMillis()}")
     }
 }
 
 // 결과:
-1
-2
-A
-3
-B
-C
+1 / 1655724966842
+A / 1655724966843
+2 / 1655724966843
+3 / 1655724966843
+B / 1655724966843
+C / 1655724966844
 ```
 
 3. asLiveData()
