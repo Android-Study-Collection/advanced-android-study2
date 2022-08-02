@@ -13,7 +13,7 @@ slideOptions:
 1. JUnit4
 2. Espresso
 3. Mockito
-4. Mockk
+4. MockK
 5. Robolectric
 6. UIAutomator2
 7. PowerMock
@@ -34,7 +34,7 @@ https://developer.android.com/training/testing/espresso
 
 3. Mockito
 Java Mock 라이브러리
-모히또(Java Moji to) 로고 - Tasty mocking framework
+모히또(Java Mojito) 로고 - Tasty mocking framework
 mock/stub/spy
 
 참고:
@@ -90,7 +90,7 @@ https://github.com/google/googletest
 
 ---
 
-# 권용근 - 무엇을 테스트할 것인가? 어떻게 테스트할 것인가?
+### 권용근 - 무엇을 테스트할 것인가? 어떻게 테스트할 것인가?
 1. 안정감과 자신감(나 뿐만이 아닌 모두에게)
 2. 구현이 아닌 설계를 테스트
 메소드1:테스트1 형태로의 테스트가 아닌 설계를 테스트 
@@ -107,7 +107,7 @@ https://www.youtube.com/watch?v=YdtknE_yPk4
 
 ---
 
-# 정진욱 - 테스트하기 쉬운 코드로 개발하기
+### 정진욱 - 테스트하기 쉬운 코드로 개발하기
 1. 테스트하기 쉬운 코드란?
 -- 같은 인풋이면 항상 같은 결과를 반환하는 코드(Deterministic)
 -- 외부 상태를 변경하지 않는 코드(ex. io관련)-no side effect
@@ -133,3 +133,4 @@ TDD: Test를 만족하는 만큼만 코드를 구현하라
 - Mock을 남발하지 말자
 참고:
 https://www.youtube.com/watch?v=Cz_a2gQp63c
+
