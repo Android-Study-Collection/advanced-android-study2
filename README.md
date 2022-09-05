@@ -55,7 +55,7 @@
 - [Week4 - TDD](week4.md)
 - [Week5 - Testing](week5.md)
 - [Week6 - Clean Code](week6.md)
-- [Week7 - ](week7.md)
+- [Week7 - Refactoring](week7.md)
 - [Week8 - ](week8.md)
 - [Week9 - ](week9.md)
 - [Week10 - ](week10.md)
