@@ -10,7 +10,6 @@ fun main(){
         }
     }
 }
-
 suspend fun fetchUserData() = "user_name"
 
 suspend fun cacheUserData(user: String) = user
